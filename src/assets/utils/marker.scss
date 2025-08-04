@@ -1,0 +1,32 @@
+$primary_color: #27876F;
+$second_color: #DD7C47;
+$point_color: #F4EBDD;
+$point_border: #B9A28A;
+
+// Marker 主體
+.marker {
+  width: 24px;
+  height: 24px;
+  background: $point_color;
+  border: 1px solid $point_border;
+  border-radius:12% 31% 11% 11% / 34% 22% 34% 42% ;
+  box-shadow:
+    inset 0 -1px 1px rgba(0, 0, 0, 0.1),
+    0 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transform: rotate(-2deg);
+
+}
+
+.popup-tip{
+  width: 0px;
+  height: 0px;
+  position:absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-top: 8px solid $point_border ;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+  
+}

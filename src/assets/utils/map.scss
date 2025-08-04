@@ -1,0 +1,35 @@
+$Primary_color: #27876F;
+$second_color: #DD7C47;
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 100%;
+}
+
+.mapboxgl-ctrl,
+.mapboxgl-ctrl-group {
+    height: 100px;
+    z-index: 10;
+    border-radius: 10px;
+    border-color: $second_color;
+}
+
+.mapboxgl-ctrl-zoom-in {
+    // 縮放放大按鈕
+}
+.mapboxgl-ctrl-icon{
+
+}
+
+.mapboxgl-ctrl-zoom-out {
+    // 縮放縮小按鈕
+}
+
+.mapboxgl-ctrl-compass {
+    //指南針按鈕
+}
+
+.mapboxgl-ctrl-group button:hover {
+}
