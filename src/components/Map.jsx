@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from 'react'
 import '../assets/utils/map.scss'
 import Marker from './Marker'
 
-mapboxgl.accessToken = 'pk.eyJ1IjoiZGFubnkyMTMxNiIsImEiOiJjbWRmcjY4ZGYwZnZwMmlxNW1jNjNudHh2In0.vi2Qg_3FrZ5UWycxlsrRDw';
+mapboxgl.accessToken = import.meta.env.VITE_MAP_TOKEN;
 
 export function Map() {
     const [mapReady, setMapReady] = useState(false) // 地圖是否建立完成
@@ -91,7 +91,7 @@ export function Map() {
     useEffect(() => {
         if (!mapReady || !places.length) return;
         places.forEach(item => {
-            new mapboxgl.Marker(Marker(item))
+            new mapboxgl.Marker(Marker(item,mapContainerRef.current ))
                 .setLngLat([item.lng, item.lat])
                 .addTo(mapRef.current);
         });
