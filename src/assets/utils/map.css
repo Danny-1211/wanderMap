@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  height: 100%;
+}
+
+.mapboxgl-ctrl,
+.mapboxgl-ctrl-group {
+  height: 100px;
+  z-index: 10;
+  border-radius: 10px;
+  border-color: #DD7C47;
+}/*# sourceMappingURL=map.css.map */

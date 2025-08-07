@@ -1,7 +1,15 @@
-$primary_color: #27876F;
+$primary_color: #0f766e;
 $second_color: #DD7C47;
 $point_color: #F4EBDD;
 $point_border: #B9A28A;
+$border_light:#e0c9a6;
+$border_light_second: #f7e6c4;
+$text_color: #bfa97a;
+$text_color_primary: #0f766e;
+$text_color_desc: #6d5c3d;
+$shadow: #999;
+$card_background: #fff7ed;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Patrick+Hand&display=swap');
 
 // Marker 主體
 .marker {
@@ -9,24 +17,123 @@ $point_border: #B9A28A;
   height: 24px;
   background: $point_color;
   border: 1px solid $point_border;
-  border-radius:12% 31% 11% 11% / 34% 22% 34% 42% ;
+  border-radius: 30px;
   box-shadow:
     inset 0 -1px 1px rgba(0, 0, 0, 0.1),
     0 2px 5px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  transform: rotate(-2deg);
+  z-index: 1; // marker 層級
+
+  &:hover {
+    opacity: 0; // 滑鼠移上 marker 時 marker 隱形
+  }
+}
+
+// Popup 主體
+.popup {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 9999; // 保證高於 marker
+  position: absolute;
 
 }
 
-.popup-tip{
+// Popup 隱藏狀態
+.pop-noShow {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease-out;
+}
+
+// Popup 內容區塊
+.popup-content {
+  width: 350px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  padding: 2px;
+
+}
+
+// Popup 圖片區塊
+.popup-image {
+
+  img {
+    margin: auto;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+    border: 2px solid $border_light;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    margin-bottom: 10px;
+  }
+}
+
+// Popup 資訊區塊
+.popup-info {
+  margin-top: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: $card_background;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 1);
+  border-radius: 2px;
+}
+
+.info-date {
+  font-size: 0.9rem;
+  color: $text_color;
+  margin-bottom: 6px;
+  font-family: 'Patrick Hand', 'Noto Sans TC', sans-serif;
+}
+
+.info-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: $text_color_primary;
+  letter-spacing: 1px;
+  margin-top: 5px;
+  margin-bottom: 2px;
+  font-family: 'Patrick Hand', 'Noto Sans TC', sans-serif;
+}
+
+.info-desc {
+  font-size: 1.05rem;
+  color: $text_color_desc;
+  line-height: 1.7;
+  letter-spacing: 0.5px;
+  font-family: 'Patrick Hand', 'Noto Sans TC', sans-serif;
+}
+
+// 仿膠帶裝飾
+.popup-content::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -12px;
+  left: 40px;
+  width: 60px;
+  height: 22px;
+  background: repeating-linear-gradient(135deg, $border_light_second, $border_light_second 6px, $border_light 6px, $border_light 12px);
+  border-radius: 6px 6px 12px 12px;
+  opacity: 0.7;
+  transform: rotate(-6deg);
+  z-index: 2;
+}
+
+// Popup 尖角
+.popup-tip {
+  content:'';
   width: 0px;
   height: 0px;
-  position:absolute;
-  top: 100%;
-  left: 50%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
   transform: translateX(-50%);
-  border-top: 8px solid $point_border ;
+  border-top: 18px solid $point_border;
   border-right: 6px solid transparent;
   border-left: 6px solid transparent;
-  
+  opacity: 1;
 }
