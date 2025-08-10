@@ -1,5 +1,5 @@
 import '../assets/utils/marker.scss';
-export function Marker(place, mapContainerEl) {
+export function Marker(place, mapContainerEl, mapCanvasEl) {
   const el = document.createElement('div');
   el.className = 'marker';
 
@@ -26,11 +26,10 @@ export function Marker(place, mapContainerEl) {
     <div class="popup-tip"></div>
   `;
     // 定位 popup 位置（可加動畫、偏移）
-    const rect = el.getBoundingClientRect();
+    const screenPos = mapCanvasEl.project([place.lng, place.lat]);
     popup.style.position = 'absolute';
-    popup.style.left = `${rect.left + window.scrollX}px`;
-    popup.style.top = `${rect.top + window.scrollY}px`; // 視覺上浮在 marker 上方
-    popup.style.zIndex = 1000;
+    popup.style.left = `${screenPos.x}px`;
+    popup.style.top = `${screenPos.y}px`;
     removeClass(popup, 'pop-noShow');
   });
 
@@ -48,7 +47,7 @@ export function Marker(place, mapContainerEl) {
     removeClass(popup, 'pop-show');
   });
   
-  return el;
+  return {el, popup, place};
 }
 
 

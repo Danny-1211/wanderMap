@@ -57,7 +57,6 @@ $card_background: #fff7ed;
 
 // Popup 圖片區塊
 .popup-image {
-
   img {
     margin: auto;
     object-fit: cover;
@@ -80,6 +79,7 @@ $card_background: #fff7ed;
   background-color: $card_background;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 1);
   border-radius: 2px;
+  padding: 5px;
 }
 
 .info-date {
