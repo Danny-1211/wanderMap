@@ -1,8 +1,9 @@
 $primary_color: #0f766e;
 $second_color: #DD7C47;
-$point_color: #F4EBDD;
+$thrid_color: #F4EBDD;
+$fourth_color:#2B3036;
 $point_border: #B9A28A;
-$border_light:#e0c9a6;
+$border_light: #e0c9a6;
 $border_light_second: #f7e6c4;
 $text_color: #bfa97a;
 $text_color_primary: #0f766e;
@@ -15,11 +16,11 @@ $card_background: #fff7ed;
 .marker {
   width: 24px;
   height: 24px;
-  background: $point_color;
+  background: $thrid_color;
   border: 1px solid $point_border;
   border-radius: 30px;
   box-shadow:
-    inset 0 -1px 1px rgba(0, 0, 0, 0.1),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.1) 8,
     0 2px 5px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   z-index: 1; // marker 層級
@@ -47,11 +48,11 @@ $card_background: #fff7ed;
 
 // Popup 內容區塊
 .popup-content {
+  position: relative;
   width: 350px;
   height: 200px;
   display: flex;
   flex-direction: column;
-  padding: 2px;
 
 }
 
@@ -62,10 +63,11 @@ $card_background: #fff7ed;
     object-fit: cover;
     width: 100%;
     height: 100%;
-    border-radius: 2px;
-    border: 2px solid $border_light;
+    border-radius: 1px;
+    border: 1px solid $primary_color;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    opacity: 0.9;
   }
 }
 
@@ -78,8 +80,9 @@ $card_background: #fff7ed;
   align-items: flex-start;
   background-color: $card_background;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 1);
-  border-radius: 2px;
   padding: 5px;
+  border-radius: 1px;
+  border: 1px solid $primary_color;
 }
 
 .info-date {
@@ -125,14 +128,15 @@ $card_background: #fff7ed;
 
 // Popup 尖角
 .popup-tip {
-  content:'';
+  content: '';
   width: 0px;
   height: 0px;
   position: absolute;
-  top: 0%;
+  top: 2px;
   left: 0%;
-  transform: translateX(-50%);
-  border-top: 18px solid $point_border;
+  transform: translateX(70%);
+  transform: rotate(80deg);
+  border-top: 18px solid $thrid_color;
   border-right: 6px solid transparent;
   border-left: 6px solid transparent;
   opacity: 1;
