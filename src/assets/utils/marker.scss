@@ -1,15 +1,4 @@
-$primary_color: #0f766e;
-$second_color: #DD7C47;
-$thrid_color: #F4EBDD;
-$fourth_color:#2B3036;
-$point_border: #B9A28A;
-$border_light: #e0c9a6;
-$border_light_second: #f7e6c4;
-$text_color: #bfa97a;
-$text_color_primary: #0f766e;
-$text_color_desc: #6d5c3d;
-$shadow: #999;
-$card_background: #fff7ed;
+@use  "/src/assets//utils/color" as *;
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Patrick+Hand&display=swap');
 
 // Marker 主體

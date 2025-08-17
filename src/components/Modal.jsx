@@ -1,3 +1,3 @@
-const Modal = {};
+export function Modal() { };
 
 export default Modal;
