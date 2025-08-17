@@ -2,46 +2,79 @@
     {
         "id": 1,
         "title": "台北 101",
-        "date": "2025-8-8",
-        "pic": "",
+        "date": "9 Aug 2023",
+        "pic": "https://images.unsplash.com/photo-1598935898639-81586f7d2129?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "description": "台灣著名地標之一，高樓景觀超棒。",
         "lng": 121.5645,
-        "lat": 25.0330
+        "lat": 25.0330,
+        "trip": "台灣環島",
+        "region": "ASIA",
+        "country": "Taiwan",
+        "year": 2025
     },
     {
         "id": 2,
-        "title": "高雄駁二藝術特區",
-        "date": "2025-8-8",
-        "pic": "",
+        "title": "高雄",
+        "date": "9 Aug 2023",
+        "pic": "https://images.unsplash.com/photo-1708481737292-3be31ee93570?q=80&w=1828&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "description": "文創、市集、港口景色一次滿足。",
         "lng": 120.2840,
-        "lat": 22.6163
+        "lat": 22.6163,
+        "trip": "台灣環島",
+        "region": "ASIA",
+        "country": "Taiwan",
+        "year": 2025
     },
     {
         "id": 3,
         "title": "花蓮太魯閣",
-        "date": "2025-8-8",
-        "pic": "",
+        "date": "9 Aug 2023",
+        "pic": "https://images.unsplash.com/photo-1604214896221-b13d964b214a?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "description": "山水壯麗、峽谷驚險，是自然控的天堂。",
         "lng": 121.4938,
-        "lat": 24.1671
+        "lat": 24.1671,
+        "trip": "台灣環島",
+        "region": "ASIA",
+        "country": "Taiwan",
+        "year": 2025
     },
     {
         "id": 4,
         "title": "巴黎",
-        "date": "2025-8-8",
+        "date": "8 Aug 2023",
         "pic": "https://images.unsplash.com/photo-1522093007474-d86e9bf7ba6f?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "description": "巴黎，一座揉合浪漫與藝術的城市，每一條街巷都散發著歷史與詩意",
         "lng": 2.164727542466383,
-        "lat": 48.87124727948759
+        "lat": 48.87124727948759,
+        "trip": "歐洲之旅",
+        "region": "EUROPE",
+        "country": "France",
+        "year": 2025
     },
     {
         "id": 5,
         "title": "里斯本",
-        "date": "2025-8-8",
+        "date": "9 Aug 2023",
         "pic": "https://plus.unsplash.com/premium_photo-1677344289076-b4e8d7325e94?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "description": "里斯本，一座懸掛在陽光與海風之間的山城，充滿老靈魂與無盡的迷人韻律。",
         "lng": -9.222564497175084,
-        "lat": 38.7681678417436
+        "lat": 38.7681678417436,
+        "trip": "歐洲之旅",
+        "region": "EUROPE",
+        "country": "Portugal",
+        "year": 2025
+    },
+    {
+        "id": 6,
+        "title": "東京",
+        "date": "9 Sep 2024",
+        "pic": "https://plus.unsplash.com/premium_photo-1661902398022-762e88ff3f82?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "description": "東京，日本的首都，融合了現代摩天大樓與傳統神社，是美食、文化與科技的交匯點",
+        "lng": 139.80537945695608,
+        "lat": 35.67272752637018,
+        "trip": "東京之旅",
+        "region": "ASIA",
+        "country": "Japan",
+        "year": 2024
     }
 ]
