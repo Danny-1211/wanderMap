@@ -3,7 +3,7 @@ import 'mapbox-gl/dist/mapbox-gl.css'
 import { useState, useRef, useEffect } from 'react'
 import '../assets/utils/map.scss'
 import Marker from './Marker'
-
+import SelectBtn from './SelectBtn.jsx';
 mapboxgl.accessToken = import.meta.env.VITE_MAP_TOKEN;
 
 export function Map() {
@@ -125,6 +125,7 @@ export function Map() {
         }
     }
 
+    // 每個事件執行不一樣的事情
     function GenrenalEvent(eventName) {
         switch (eventName) {
             case 'mousedown':
@@ -140,6 +141,7 @@ export function Map() {
         }
     }
 
+    // 註冊事件時要用的 handler
     function createGeneralHandler(eventName) {
         return function () {
             GenrenalEvent(eventName);
@@ -149,6 +151,7 @@ export function Map() {
     return (
         <div style={{ width: '100vw', height: '100vh' }}>
             <div ref={mapContainerRef}></div>
+            {places ? <SelectBtn places={places} /> : <div>載入中...</div>}
         </div>
     );
 }
